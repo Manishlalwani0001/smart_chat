@@ -1,0 +1,29 @@
+
+{
+  "manifest_version": 3,
+    "name": "smart_chat",
+    "version": "0.1.0",
+    "description": "providing best response ",
+    "action": {
+      "default_popup": "popUp.html",
+      "default_icon":"chat_logo.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://web.whatsapp.com/#"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+      "128": "chat_logo.png"
+  },
+     "permissions":["activeTab", "scripting"]
+     
+    
+     
+  }
+ 
+  
